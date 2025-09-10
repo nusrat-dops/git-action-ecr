@@ -23,7 +23,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.ECR_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::138645654058:role/ecr-push-role
           aws-region: ap-south-1
 
       - name: Ensure ECR repo exists and login
