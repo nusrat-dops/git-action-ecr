@@ -4,6 +4,7 @@
   "extends": [
     "config:base"
   ],
+  "autodescovery":true
   "dependencyDashboard": false,
   "prHourlyLimit": 10,
   "hostRules": [
