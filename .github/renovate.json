@@ -6,7 +6,7 @@
   ],
   "hostRules": [
     {
-      "matchHost": "<YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com",
+      "matchHost": "138645654058.dkr.ecr.ap-south-1.amazonaws.com",
       "username": "AWS",
       "password": "{{ env.RENOVATE_AWS_ECR_PASSWORD }}"
     }
@@ -17,8 +17,7 @@
         "docker"
       ],
       "registryUrls": [
-        "https://ghcr.io",
-        "<YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com"
+        "138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"
       ]
     },
     {
@@ -29,8 +28,7 @@
   ],
   "kubernetes": {
     "fileMatch": [
-      "kubernetes/.+\\.yaml$",
-      "deploy/.+\\.yaml$"
+      "manifests/.+\\.yaml$",
     ]
   },
   "prConcurrentLimit": 10
