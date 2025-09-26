@@ -1,1 +1,37 @@
 
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "hostRules": [
+    {
+      "matchHost": "<YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com",
+      "username": "AWS",
+      "password": "{{ env.RENOVATE_AWS_ECR_PASSWORD }}"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "registryUrls": [
+        "https://ghcr.io",
+        "<YOUR_ACCOUNT_ID>.dkr.ecr.<YOUR_REGION>.amazonaws.com"
+      ]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ],
+  "kubernetes": {
+    "fileMatch": [
+      "kubernetes/.+\\.yaml$",
+      "deploy/.+\\.yaml$"
+    ]
+  },
+  "prConcurrentLimit": 10
+}
