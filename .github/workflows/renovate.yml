@@ -26,8 +26,7 @@ jobs:
       - name: Get ECR login password
         id: ecr_password
         run: |
-          ECR_PASSWORD=$(aws ecr get-login-password --region ${{ env.AWS_REGION }})
-          echo "RENOVATE_AWS_ECR_PASSWORD=${ECR_PASSWORD}" >> $GITHUB_ENV
+          echo "RENOVATE_AWS_ECR_PASSWORD=$(aws ecr get-login-password --region ${{ env.AWS_REGION }})" >> $GITHUB_ENV
 
       - name: Run Renovate
         uses: renovatebot/github-action@v40.3.6
