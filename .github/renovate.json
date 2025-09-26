@@ -16,16 +16,9 @@
   ],
   "packageRules": [
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      
-      "registryUrls": [
-        "138645654058.dkr.ecr.ap-south-1.amazonaws.com"
-      ],
+      "matchDatasources": [ "docker"],
+      "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
       "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-    },
-    {
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
