@@ -11,5 +11,5 @@ jobs:
         uses: Mattraks/delete-workflow-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          retain_days: 0      # keep runs from the last 30 days
+          retain_days: 1      # keep runs from the last 30 days
           keep_minimum_runs: 3 # keep at least 10 runs per workflow
