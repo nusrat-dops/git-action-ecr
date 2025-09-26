@@ -4,6 +4,8 @@
   "extends": [
     "config:base"
   ],
+  "dependencyDashboard": false,
+  "prHourlyLimit": 10,
   "hostRules": [
     {
       "matchHost": "138645654058.dkr.ecr.ap-south-1.amazonaws.com",
@@ -16,9 +18,11 @@
       "matchDatasources": [
         "docker"
       ],
+      
       "registryUrls": [
-        "138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"
-      ]
+        "138645654058.dkr.ecr.ap-south-1.amazonaws.com"
+      ],
+      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
     },
     {
       "matchManagers": ["github-actions"],
@@ -26,6 +30,7 @@
       "automerge": true
     }
   ],
+  
   "kubernetes": {
     "fileMatch": [
       "manifests/.+\\.yaml$",
