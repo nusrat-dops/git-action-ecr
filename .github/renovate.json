@@ -1,12 +1,10 @@
 
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base"
-  ],
-
+  "extends": ["config:base"],
   "dependencyDashboard": false,
   "prHourlyLimit": 10,
+  "prConcurrentLimit": 10,
   "hostRules": [
     {
       "matchHost": "138645654058.dkr.ecr.ap-south-1.amazonaws.com",
@@ -18,19 +16,16 @@
     {
      "matchDatasources": ["docker"],
      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-      "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
+    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
     },
     {
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false
+      "automerge": true
     }
   ],
   
   "kubernetes": {
-    "fileMatch": [
-     "(^|/)manifeste\\.ya?ml$"
-    ]
-  },
-  "prConcurrentLimit": 10
+    "fileMatch": ["(^|/)manifeste/.+\\.ya?ml$"]
+  }
 }
