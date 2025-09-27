@@ -21,7 +21,7 @@
     {
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
-      "automerge": true
+      "automerge": false
     }
   ],
   
