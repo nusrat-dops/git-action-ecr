@@ -16,7 +16,7 @@
     {
      "matchDatasources": ["docker"],
      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
+    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"]
     },
     {
       "matchManagers": ["github-actions"],
