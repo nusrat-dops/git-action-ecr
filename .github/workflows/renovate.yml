@@ -34,3 +34,9 @@ jobs:
           token: ${{ secrets.RENOVATE_TOKEN }}
           configurationFile: .github/renovate.json
           # RENOVATE_AWS_ECR_PASSWORD is set via the GITHUB_ENV variable
+        env:
+          RENOVATE_REPOSITORIES: ${{ github.repository }}
+          RENOVATE_ONBOARDING: "false"
+          RENOVATE_PLATFORM: "github"
+          LOG_LEVEL: "debug"
+
