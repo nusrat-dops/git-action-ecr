@@ -10,7 +10,7 @@
       "hostType": "docker",
       "matchHost": "138645654058.dkr.ecr.ap-south-1.amazonaws.com",
       "username": "AWS",
-      "password": "{{ env.RENOVATE_AWS_ECR_PASSWORD }}"
+      "password": "processs.env.RENOVATE_AWS_ECR_PASSWORD"
     }
   ],
    "kustomize": {
