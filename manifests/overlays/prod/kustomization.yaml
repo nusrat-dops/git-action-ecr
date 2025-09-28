@@ -1,0 +1,9 @@
+resources:
+- ../../base
+
+images:
+- name: 138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction
+  newTag: v1.0.0
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
