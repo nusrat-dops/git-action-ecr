@@ -16,6 +16,7 @@
   "packageRules": [
     {
      "matchDatasources": ["docker"],
+      "pinDigests": true,
      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
     "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"]
     },
@@ -27,6 +28,6 @@
   ],
   
   "kubernetes": {
-    "fileMatch": ["(^|/)manifeste/.+\\.ya?ml$"]
+    "fileMatch": ["(^|/)manifests/.+\\.ya?ml$"]
   }
 }
