@@ -16,5 +16,5 @@ spec:
     spec:
       containers:
         - name: python-app
-          image: 138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction:v1.0.0-a365740
+          image: 138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction:v1.0.0-a265730
             - containerPort: 8000
