@@ -10,7 +10,9 @@
       "hostType": "docker",
       "matchHost": "138645654058.dkr.ecr.ap-south-1.amazonaws.com",
       "username": "AWS",
-      "password": "{{ env.RENOVATE_AWS_ECR_PASSWORD }}"
+       "password": "RIfycxmCSn1dnaUDLOj75V5nXGjm3deuxXiFYfe3",
+       "awsAccessKeyId": "AKIASAR7MZIVG3UCNOPY",
+       "awsRegion": "${{ env.AWS_REGION }}"
     }
   ],
    "kustomize": {
@@ -26,8 +28,9 @@
      "matchDatasources": ["docker"],
       "pinDigests": true,
      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
-       "groupName": "ghcr-docker-images",
+      "enabled": false,
+      "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
+      "groupName": "ecr-docker-images",
       "automerge": false
     }
    
