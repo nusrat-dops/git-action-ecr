@@ -45,9 +45,7 @@ jobs:
        # 🔑  Create the tag variable
       - name: Compute image tag
         id: vars
-        run: |
-         echo "IMAGE_TAG=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
-
+        run: echo "IMAGE_TAG=v1.0.${{ github.run_number }}" >> $GITHUB_OUTPUT
       # 🐳 Build and push image with the new tag
 
       - name: Build and push
