@@ -31,9 +31,6 @@
       "automerge": false
     }
    
-  ],
+  ]
   
-  "kubernetes": {
-    "fileMatch": ["(^|/)manifests/.+\\.ya?ml$"]
-  }
 }
