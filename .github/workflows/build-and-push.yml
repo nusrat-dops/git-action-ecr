@@ -50,8 +50,7 @@ jobs:
           TAG="v1.0.${{ github.run_number }}"
           echo "IMAGE_TAG=$TAG" >> $GITHUB_OUTPUT
 
-           # SHORT_SHA=$(git rev-parse --short HEAD)
-          # echo "IMAGE_TAG=v1.0.0-${SHORT_SHA}" >> $GITHUB_ENV
+
 
       # 🐳 Build and push image with the new tag
 
