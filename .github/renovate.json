@@ -24,9 +24,6 @@
         "kustomize"
       ],
      "matchDatasources": ["docker"],
-      "pinDigests": true,
-     "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-      "enabled": false,
       "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
       "groupName": "ecr-docker-images",
       "automerge": false
