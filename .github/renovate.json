@@ -13,18 +13,24 @@
       "password": "{{ env.RENOVATE_AWS_ECR_PASSWORD }}"
     }
   ],
+   "kustomize": {
+        "fileMatch": [
+            "(^|/)kustomization\\.ya?ml$"
+        ]
+    }, 
   "packageRules": [
     {
+       "matchManagers": [
+        "kustomize"
+      ],
      "matchDatasources": ["docker"],
       "pinDigests": true,
      "matchPackageNames": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com/gitaction"],
-    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"]
-    },
-    {
-      "matchManagers": ["github-actions"],
-      "matchUpdateTypes": ["minor", "patch"],
+    "registryUrls": ["138645654058.dkr.ecr.ap-south-1.amazonaws.com"],
+       "groupName": "ghcr-docker-images",
       "automerge": false
     }
+   
   ],
   
   "kubernetes": {
